@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+	padding: 20px;
+	background: linear-gradient(90deg, rgba(0,0,0,0.6054796918767507) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.6110819327731092) 100%), url(imagens/narutobg.gif);
+
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-items: center;
+	
+}
+.mapa-selecionado{
+	width: 600px;
+	height: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	background: red;
+
+}
+.nome-mapa{
+	transform: translateY(10px);
+}
+.selecao-de-mapas{
+	width: 1200px;
+	display: flex;
+	background: rgba(125,119,119,0.3);
+	justify-content: flex-end;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	margin-left: 60px;
+}
+.lista-mapa{
+	display: flex;
+	width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.mapas img{
+	margin-right: 10px;
+	justify-content: center;
+	border-radius: 5px;
+	border: 3px solid whitesmoke;
+
+}

@@ -1,0 +1,515 @@
+ @font-face {
+ 	font-family: FONT1;
+ 	src: url(fontes/PILOT_COMMAND.otf);
+ 	font-family: FONT2;
+ 	src:  url(fontes/njnaruto.ttf);
+ }
+ @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@keyframes floating {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(0.9);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+
+ body{
+   margin: 0px;
+   padding: 0px;
+   font-family: sans-serif;
+   display: flex;
+}
+
+ header{
+ 	width: 100%;
+ 	height: auto;
+ }
+ main{
+
+ }
+ footer{
+
+ }
+
+ /*CONTEÚDO*/
+
+ body{
+
+ 	background: linear-gradient(90deg, rgba(0,0,0,0.6054796918767507) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.6110819327731092) 100%), url(imagens/bg.jpg);
+   flex-direction: column;
+ 	background-attachment: fixed;
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+   background-size: cover;
+    padding-left: 70px;
+ }
+
+ .cabecalho{
+       /*border: 1px solid #e6b800;*/
+       font-family: FONT2;
+       text-align: center;
+
+ }
+ .cabecalho h1{
+ 	margin-left: 25px;
+ 	color: yellow;
+ 	margin-bottom: -35px; 
+    text-shadow: 4px 5px 2px #FF7A33;
+    z-index: 1;
+     animation: floating 1s infinite alternate;
+   
+
+ }
+ .personagem-gande{
+     width: 400px;
+ }
+
+ .area-de-selecao{
+ 	display: flex;
+ 	margin-top: 25px;
+    margin-left: 30px
+
+ }
+ .selecao{
+    display: flex;
+ }
+
+.personagens{
+	width: 390px;
+	padding-left: 0px;
+	margin: 25% 0px 0px 0px;
+    padding-left: 30px;
+    justify-content: center;
+
+}
+ .personagens li{
+    justify-content: center;
+ 	display: inline-flex;
+ 	width: 100px;
+ 	height: 100px;
+ 	margin: 5px 5px 5px 5px;
+ 	border: 2px solid dimgray;
+ 	border-radius: 10px;
+ }
+ .tag{
+    display: none;
+ }
+
+ .tag:hover{
+  display: block;
+ }
+ 
+ .personagem img{
+    border-radius: 10px;
+    z-index: 1;
+ }
+ .personagem-jogador1{
+    width: 400px;
+    height: 400px;
+ }
+ .nome-do-personagem{
+ 	color: white;
+ 	font-family: FONT2;
+ 	border-radius: 10px;
+ 	text-align: center;
+ 	margin-left: 5px;
+ 	margin-right: 5px;
+    transform: translateY(-60px);
+    text-shadow: 0px 0px 2px darkblue;
+    color: ORANGE;
+    font-size: 1.5rem;
+ }
+ }
+ .nome-do-personagem h2{
+    transform: translateY(-10px);
+
+ }
+ .nome-do-personagem2{
+ 	color: white;
+ 	font-family: FONT2;
+ 	border-radius: 3px;
+ 	text-align: center;
+ 	margin-left: 5px;
+ 	margin-right: 5px;
+    transform: translateY(-60px);
+    color: ORANGE;
+    font-size: 1.5rem;
+
+ }
+ .nome-do-personagem2 h2{
+    transform: translateY(-10px);
+    font-size: 2rem;
+    text-shadow: 0px 0px 2px darkred;
+ }
+
+
+ .jogador2 img{
+    border-radius: 10px;
+ }
+
+ @keyframes lightsOn {
+
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+@keyframes filterGlow {
+
+  from {
+    filter: none;
+  }
+
+  to {
+    filter: drop-shadow(0 0 10px rgba(15, 15, 255, 1.0));
+  }
+
+}
+@keyframes lightsOn {
+
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+@keyframes filterGlowR {
+
+  from {
+    filter: none;
+  }
+
+  to {
+    filter: drop-shadow(0 0 10px rgba(255, 15, 15, 1.0));
+  }
+
+}
+.jogador2{
+    border-radius: 10px;
+    border: 3px solid rgba(255, 0, 0, 0.6);
+    box-shadow: -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255,15,15,0.4); 
+    box-shadow: inset 0px 0px 50px 14px rgba(255,15,15,0.4);;
+    z-index: 1;
+    animation:  filterGlowR 0.3s infinite alternate;
+
+ }
+
+ .selecionado{
+    margin: -3px -3px -3px -3px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 155, 255, 0.6);
+    box-shadow: -webkit-box-shadow: inset 0px 0px 50px 14px rgba(15,15,255,0.4); 
+    box-shadow: inset 0px 0px 50px 14px rgba(15,15,255,0.4);;
+    animation: filterGlow 0.5s infinite alternate;
+    transition: all 0.3s;
+   
+
+ }
+
+ /*PLAY BUTTOM*/
+
+ .play{
+   display: flex;
+   height: 120px;
+   bottom: 0;
+   transform: translateY(-25px);
+   justify-content: flex-end;
+   
+ }
+ .play-div{
+   max-height: 50px;
+   margin-right: 150px;
+ }
+ .play-div span{
+   visibility: hidden;
+   transform: translateX(10px);
+ }
+
+ .play-btn{
+   z-index: 1;
+   width: 150px;
+   height: 50px;
+   font-family: FONT2;
+   font-size: 3rem;
+   background-color: transparent;
+   border: none;
+   color: whitesmoke;
+   text-shadow: 4px 5px 2px #FF7A33;
+   animation: floating 2s infinite alternate;
+   visibility: hidden;
+   text-decoration: none;
+ }
+ .play-btn a{
+   text-decoration: none;
+   color: whitesmoke;
+ }
+ .show{
+   visibility: visible;
+ }
+
+
+
+
+ @media (max-width: 1000px){
+     body{
+       margin: 0px;
+       padding: 0px;
+       font-family: sans-serif;
+       display: flex;
+    }
+
+     header{
+        width: 100%;
+        height: auto;
+     }
+     main{
+
+     }
+     footer{
+
+     }
+
+     /*CONTEÚDO*/
+
+     body{
+
+        background: linear-gradient(90deg, rgba(0,0,0,0.6054796918767507) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.6110819327731092) 100%), url(imagens/bg.jpg);
+       flex-direction: column;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+       background-size: cover;
+        
+     }
+
+     .cabecalho{
+        font-family: FONT2;
+        text-align: center;
+
+     }
+     .cabecalho h1{
+        margin-left: 25px;
+        color: yellow;
+        margin-bottom: -35px; 
+        text-shadow: 4px 5px 2px #FF7A33;
+        z-index: 1;
+         animation: floating 1s infinite alternate;
+       
+
+     }
+     .personagem-gande{
+         width: 200px;
+     }
+     .mobile-selecionado{
+        width: 200px;
+        height: 200px;
+     }
+
+     .area-de-selecao{
+        width: 600px;
+        display: flex;
+        margin: 25px auto 0px auto;
+
+     }
+     .selecao{
+        display: flex;
+     }
+
+    .personagens{
+        width: 205px;
+        padding-left: 0px;
+        margin: 5% 0px 0px 0px;
+       
+        justify-content: center;
+
+    }
+     .personagens li{
+        justify-content: center;
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        margin: 5px 5px 5px 5px;
+        border: 2px solid dimgray;
+        border-radius: 10px;
+     }
+     .tag{
+        display: none;
+     }
+
+     .tag:hover{
+      display: block;
+     }
+
+     .personagem img{
+        border-radius: 10px;
+        z-index: 1;
+     }
+     .personagem-jogador1{
+        width: 200px;
+        height: 200px;
+     }
+     .nome-do-personagem{
+        color: white;
+        font-family: FONT2;
+        border-radius: 10px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        transform: translateY(-60px);
+        text-shadow: 0px 0px 2px darkblue;
+        color: ORANGE;
+        font-size: 1rem;
+     }
+     }
+     .nome-do-personagem h2{
+        transform: translateY(-10px);
+
+     }
+     .nome-do-personagem2{
+        color: white;
+        font-family: FONT2;
+        border-radius: 3px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        transform: translateY(-60px);
+        color: ORANGE;
+        font-size: 1rem;
+
+     }
+     .nome-do-personagem2 h2{
+        transform: translateY(-10px);
+        font-size: 2rem;
+        text-shadow: 0px 0px 2px darkred;
+     }
+
+
+     .jogador2 img{
+        border-radius: 10px;
+     }
+
+     @keyframes lightsOn {
+
+      from {
+        opacity: 0.2;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+    @keyframes filterGlow {
+
+      from {
+        filter: none;
+      }
+
+      to {
+        filter: drop-shadow(0 0 10px rgba(15, 15, 255, 1.0));
+      }
+
+    }
+    @keyframes lightsOn {
+
+      from {
+        opacity: 0.2;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+    @keyframes filterGlowR {
+
+      from {
+        filter: none;
+      }
+
+      to {
+        filter: drop-shadow(0 0 10px rgba(255, 15, 15, 1.0));
+      }
+
+    }
+    .jogador2{
+        border-radius: 10px;
+        border: 3px solid rgba(255, 0, 0, 0.6);
+        box-shadow: -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255,15,15,0.4); 
+        box-shadow: inset 0px 0px 50px 14px rgba(255,15,15,0.4);;
+        z-index: 1;
+        animation:  filterGlowR 0.3s infinite alternate;
+
+     }
+
+     .selecionado{
+        margin: -3px -3px -3px -3px;
+        border-radius: 10px;
+        border: 3px solid rgba(0, 155, 255, 0.6);
+        box-shadow: -webkit-box-shadow: inset 0px 0px 50px 14px rgba(15,15,255,0.4); 
+        box-shadow: inset 0px 0px 50px 14px rgba(15,15,255,0.4);;
+        animation: filterGlow 0.5s infinite alternate;
+        transition: all 0.3s;
+       
+
+     }
+
+     /*PLAY BUTTOM*/
+
+     .play{
+       display: flex;
+       height: 40px;
+       bottom: 0;
+       transform: translateY(-75px);
+       justify-content: flex-end;
+       
+     }
+     .play-div{
+       max-height: 50px;
+       margin-right: 80px;
+     }
+     .play-div span{
+       visibility: hidden;
+       transform: translateX(10px);
+     }
+
+     .play-btn{
+       z-index: 1;
+       width: 150px;
+       height: 50px;
+       font-family: FONT2;
+       font-size: 2.5rem;
+       background-color: transparent;
+       border: none;
+       color: whitesmoke;
+       text-shadow: 4px 5px 2px #FF7A33;
+       animation: floating 2s infinite alternate;
+       visibility: hidden;
+       text-decoration: none;
+     }
+     .play-btn a{
+       text-decoration: none;
+       color: whitesmoke;
+     }
+     .show{
+       visibility: visible;
+     }
+
+
+ }
